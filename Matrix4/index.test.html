@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列主序存储的4x4坐标变换矩阵</title>
+</head>
+
+<body>
+    <script type="module">
+
+        import Matrix4 from './index.js';
+
+        /**
+         * 旋转矩阵
+         */
+
+        // [3, 1, 0, 1]
+        console.log(Matrix4().rotate(Math.PI / 2, 2, 1).use(2, 0));
+
+        // [0, 0, 1, 1]
+        console.log(Matrix4().rotate(Math.PI / 3 * 2, 1, 1, 1).use(0, 1, 0));
+
+        // [2, 0, 1, 1]
+        console.log(Matrix4().rotate(Math.PI / 3 * 4, 1, 0, 1, 2, 1, 2).use(1, 1, 1));
+
+        /**
+         * 缩放矩阵
+         */
+
+        // [0, -4, 1, 1]
+        console.log(Matrix4().scale(1, 2, 7, 3, 4, 1).use(0, 0, 1));
+
+        /**
+         * 移动矩阵
+         */
+
+        // [4, 6, 0, 1]
+        console.log(Matrix4().move(5, 3, 4).use(1, 2));
+
+        // [4, 5, 1, 1]
+        console.log(Matrix4().move(5, 3, 4, 0).use(1, 1, 1));
+
+        /**
+         * 多变换矩阵
+         */
+
+        // [2, 0, 1, 1]
+        console.log(Matrix4().scale(0.5, 0.5, 0.5, 1, 0, 0).move(Math.sqrt(14), -1, -2, -3).rotate(Math.PI / 3 * 4, 1, 0, 1, 2, 1, 2).use(3, 6, 8));
+
+    </script>
+</body>
+
+</html>

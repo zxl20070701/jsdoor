@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+'use strict';
+
+process.title = 'jsdoor-cli';
+
+// 获取命令行参数
+const parsed = require('./option')({
+    "-s": '--server'
+}, process.argv);
+
+// 启动服务器
+if (Array.isArray(parsed.server)) {
+
+    require('./server')();
+
+}
+
+// 打印提示信息
+else {
+
+}

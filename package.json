@@ -1,0 +1,35 @@
+{
+  "name": "jsdoor",
+  "version": "0.1.0",
+  "description": "🔨 JS快速使用库，包括开发服务器和一系列实用工具",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "node ./bin/run -s"
+  },
+  "bin": {
+    "jsdoor": "bin/run"
+  },
+  "keywords": [
+    "base",
+    "tool",
+    "matrix",
+    "nodejs",
+    "h5",
+    "es",
+    "js",
+    "css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxl20070701/jsdoor.git"
+  },
+  "author": {
+    "name": "zxl20070701",
+    "url": "https://github.com/zxl20070701"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zxl20070701/jsdoor/issues"
+  },
+  "homepage": "https://zxl20070701.github.io/jsdoor/index.html"
+}
