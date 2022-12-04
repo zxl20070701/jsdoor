@@ -32,6 +32,10 @@ const router = createRouter({
         path: '/Matrix4',
         name: 'Matrix4',
         component: () => import('../views/Matrix4.vue')
+      }, {
+        path: '/interpolation',
+        name: 'interpolation',
+        component: () => import('../views/interpolation.vue')
       }]
     }
   ]

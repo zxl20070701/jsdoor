@@ -12,6 +12,7 @@ import { RouterLink, RouterView } from "vue-router";
       <router-link to="resizeElement"> 监听节点大小改变 </router-link>
       <router-link to="Matrix4"> 列主序存储的4x4坐标变换矩阵 </router-link>
       <router-link to="value"> 字符串表达式解析 </router-link>
+      <router-link to="interpolation">插值函数</router-link>
       <h2>辅助开发</h2>
       <router-link to="server"> 开发服务器 </router-link>
     </div>

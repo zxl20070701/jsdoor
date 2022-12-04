@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>插值函数</title>
+</head>
+
+<body>
+
+
+    <script type="module">
+
+        import Hermite from './Hermite.js';
+
+        var interpolate = Hermite(1).setP(0, 1, 3, 28, 0, 27);
+
+        console.log(interpolate(0)); // 1
+        console.log(interpolate(1)); // 2
+        console.log(interpolate(2)); // 9
+        console.log(interpolate(3)); // 28
+
+    </script>
+
+</body>
+
+</html>
