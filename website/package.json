@@ -3,8 +3,8 @@
   "version": "0.1.0-alpha.0",
   "description": "",
   "scripts": {
-    "dev": "VITE_USER_NODE_ENV=development && vite",
-    "build": "VITE_USER_NODE_ENV=production && vue-tsc --noEmit && vite build"
+    "dev": "vite",
+    "build": "node ./PkgPlugin.js && vue-tsc --noEmit && vite build"
   },
   "dependencies": {
     "vue": "^3.2.37",

@@ -2,7 +2,7 @@
 🔨 JS快速使用库，包括开发服务器和一系列实用工具
 
 <p>
-  <a href="https://yelloxing.github.io/npm-downloads?interval=7&packages=jsdoor"><img src="https://img.shields.io/npm/dm/jsdoor.svg" alt="downloads"></a>
+  <a href="https://zxl20070701.github.io/toolbox/#/npm-download?interval=7&packages=jsdoor"><img src="https://img.shields.io/npm/dm/jsdoor.svg" alt="downloads"></a>
   <a href="https://www.npmjs.com/package/jsdoor"><img src="https://img.shields.io/npm/v/jsdoor.svg" alt="Version"></a>
   <a href="https://github.com/zxl20070701/jsdoor/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/jsdoor.svg" alt="License"></a>
   <a href="https://github.com/zxl20070701/jsdoor" target='_blank'><img alt="GitHub repo stars" src="https://img.shields.io/github/stars/zxl20070701/jsdoor?style=social"></a>
