@@ -1,0 +1,1 @@
+export default function (target: any, expressArray: Array<string>, scope?: any): any

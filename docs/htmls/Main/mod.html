@@ -1,0 +1,20 @@
+<div ng-init='initMethod()' ui-style="./htmls/Main/mod.scss" class="main-view">
+
+    <header>
+        <h2>
+            jsdoor
+        </h2>
+        <ul>
+            <li ui-active="stateValues[1]=='guide'?'yes':'no'" ng-click="goto('main.guide')">
+                <span>首页</span>
+            </li>
+            <li ui-active="stateValues[1]=='docs'?'yes':'no'" ng-click="goto('main.docs.guide')">
+                <span>文档</span>
+            </li>
+        </ul>
+    </header>
+
+    <!--路由跳转视图-->
+    <div ui-view></div>
+
+</div>

@@ -3,4 +3,5 @@
 .project
 node_modules
 docs
-website
+*.test.html
+package-lock.json

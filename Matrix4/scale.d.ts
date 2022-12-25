@@ -1,0 +1,1 @@
+export default function (xTimes: number, yTimes: number, zTimes: number, cx: number, cy: number, cz: number): Array<number>

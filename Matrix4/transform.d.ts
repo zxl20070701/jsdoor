@@ -1,0 +1,1 @@
+export default function (a1: number, b1: number, c1: number, a2: number, b2: number, c2: number): Array<number>

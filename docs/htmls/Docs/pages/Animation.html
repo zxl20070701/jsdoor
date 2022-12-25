@@ -1,0 +1,18 @@
+<header>动画执行函数</header>
+<h2>引入</h2>
+<pre ui-code="javascript">import Animation from 'jsdoor/Animation/index.js';</pre>
+<h2>使用</h2>
+<p>这里不是真正的动画，只是一个方便你实现动画效果的一个辅助方法：</p>
+<pre ui-code="javascript">
+var stop=Animation(function(deep){
+    // deep取值0-1，表示动画进度
+}, speeds, function(deep){
+    // deep和上面一样，提供的原因是有时候结束回调是stop方法触发而不是动画结束了
+});
+    </pre>
+<p>
+    该方法有三个参数：分别表示画帧方法、动画时长和动画结束回调（动画时长单位毫秒，最后两个均可选）。
+</p>
+<h3>立刻停止</h3>
+<p>如果你希望动画立刻结束，可以调用下面的方法强行提前停止：</p>
+<pre ui-code="javascript">stop();</pre>

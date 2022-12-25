@@ -1,6 +1,6 @@
 {
   "name": "jsdoor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "🔨 JS快速使用库，包括开发服务器和一系列实用工具",
   "sideEffects": false,
   "scripts": {

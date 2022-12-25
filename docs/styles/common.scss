@@ -1,0 +1,121 @@
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+body {
+    font-family: cursive;
+
+    &>.quick-link {
+        position: fixed;
+        top: 120px;
+        background-color: white;
+        box-shadow: 0 0 6px 0px #d6cdcd;
+        padding: 5px;
+        z-index: 1;
+
+        &.left {
+            border-radius: 0 10px 10px 0;
+            left: 0;
+
+            [active='yes'] {
+                display: inline-block;
+                width: calc(100% + 8px);
+                border-right: 2px solid red;
+                margin-left: -5px;
+            }
+
+            &.bottom {
+                top: 320px;
+            }
+        }
+
+        &.right {
+            border-radius: 10px 0 0 10px;
+            right: 0;
+        }
+
+        &>.item {
+            display: block;
+            font-size: 12px;
+            line-height: 30px;
+            width: 50px;
+            background-size: 100% auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+            padding-top: 50px;
+            text-align: center;
+            color: black;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.notebook {
+                background-image: url('./images/notebook.png');
+            }
+
+            &.toolbox {
+                background-image: url('./images/toolbox.png');
+            }
+
+            &.main {
+                background-image: url('./images/logo.png');
+            }
+
+            &.examples {
+                background-image: url('./images/idea.png');
+            }
+
+            &.code-source {
+                background-image: url('./images/code-source.jpg');
+            }
+
+            &.contact-us {
+                background-image: url('./images/contact-us.jpg');
+            }
+        }
+    }
+
+    &>.fixed {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 1;
+
+        &.stone {
+            background-image: url("./images/stone.png");
+            top: 60px;
+            left: -2px;
+        }
+
+        &.angry {
+            background-image: url("./images/angry.png");
+            top: 64px;
+            right: 0;
+            z-index: 2;
+        }
+
+        &.laboratory {
+            background-image: url('./images/laboratory.png');
+            right: 5px;
+            top: 400px;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+
+        &.edit {
+            background-image: url('./images/edit.png');
+            left: 0;
+            top: 500px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+    }
+}

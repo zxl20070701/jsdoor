@@ -1,0 +1,1 @@
+export default function (el: Element, doback: Function): null

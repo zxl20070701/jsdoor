@@ -1,0 +1,1 @@
+export default function (target:any, express:string, scope?:any) :Array<string>

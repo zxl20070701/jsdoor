@@ -1,0 +1,55 @@
+.main-view {
+    &>header {
+        line-height: 50px;
+        height: 50px;
+        width: 100vw;
+        background-color: #fff;
+        box-shadow: rgb(0 0 0 / 10%) 0 1px 2px;
+        padding: 0 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        user-select: none;
+
+        &>h2 {
+            color: #000000;
+            font-weight: 800;
+            font-family: fangsong;
+            display: inline-block;
+            background-image: url('./images/logo.png');
+            background-size: auto 90%;
+            background-position: left center;
+            padding-left: 50px;
+            background-repeat: no-repeat;
+        }
+
+        &>ul {
+            position: absolute;
+            right: 100px;
+            top: 0;
+            cursor: pointer;
+            display: inline-block;
+
+            &>li {
+                padding: 0 10px;
+                font-weight: 800;
+                position: relative;
+                display: inline-block;
+
+                &[active='yes'] {
+                    border-bottom: 3px solid red;
+
+                    &>span {
+                        background-color: red;
+                        color: white;
+                        padding: 5px 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    &>div {
+        height: calc(100vh - 50px);
+    }
+}

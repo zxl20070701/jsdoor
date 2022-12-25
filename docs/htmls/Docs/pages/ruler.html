@@ -1,0 +1,22 @@
+<header>刻度尺刻度求解</header>
+<h2>引入</h2>
+<pre ui-code="javascript">import ruler from 'jsdoor/ruler/index.js';</pre>
+<h2>使用</h2>
+<p>引入以后，直接使用即可：</p>
+<pre ui-code="javascript">var rulerData = ruler(maxValue, minValue, num);</pre>
+<p>
+    maxValue表示最大值，minValue表示最小值，num表示间距个数，需要注意的是，实际的间距个数可能是
+    num-1 或 num 或 num+1 或 1。
+</p>
+<h2>例子</h2>
+<pre ui-code="javascript">var rulerData = ruler(198, 4, 5);</pre>
+<p>
+    运行后 rulerData 的值：
+    <span class="important">[0, 40, 80, 120, 160, 200]</span>。
+</p>
+<h2>说明</h2>
+<p>
+    我们并不总可以获得好的结果，有时候可能存在过长的小数点等问题，你可以自行进行兼容，或者
+    <a href="https://github.com/zxl20070701/jsdoor/tree/master/ruler" target="_blank" class="link">贡献代码</a>
+    帮助我们改进。
+</p>

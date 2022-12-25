@@ -1,0 +1,79 @@
+.guide-view {
+    background: #f6f8f8;
+    min-height: calc(100vh - 50px);
+    margin-top: 50px;
+
+    &>header {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.5em;
+        padding: 30px 0;
+
+        &>span {
+            vertical-align: middle;
+            margin-left: 10px;
+            padding: 3px 6px;
+        }
+
+        &>p {
+            font-size: 16px;
+
+            &>a {
+                color: #4078c0;
+            }
+        }
+    }
+
+    &>div {
+        background-color: #fff;
+        padding: 15px 100px;
+        min-height: calc(100vh - 200px);
+        color: #3a585f;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                text-decoration: underline;
+                color: rgb(61, 121, 145);
+            }
+
+            &.link {
+                color: rgb(27, 106, 252);
+                font-size: 14px;
+            }
+        }
+
+        &>h2 {
+            padding-bottom: 9px;
+            border-bottom: 1px solid #eee;
+            display: block;
+            font-weight: 200;
+        }
+
+        &>ul {
+            padding-top: 9px;
+            column-count: 3;
+            line-height: 1.6em;
+
+            &>li {
+                break-inside: avoid;
+
+                &>h4 {
+                    font-weight: 600;
+                    padding-top: 10px;
+                }
+
+                &>ol {
+                    margin-left: 1em;
+                    padding-left: 10px;
+
+                    &>li {
+                        list-style-type: circle;
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -12,3 +12,13 @@ v0.1.1:
     changes:
         - 新增内容：
           1、插值函数：Cardinal和Hermite
+v0.1.2:
+    date:2022-12-25
+    changes:
+        - 新增内容：
+          1、动画执行函数：Animation
+          2、刻度尺刻度求解：ruler
+          3、三维画笔：WebGL
+        - 优化内容：
+          1、添加d.ts文件以兼容ts开发环境
+          2、文档整体优化

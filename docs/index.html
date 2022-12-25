@@ -1,18 +1,96 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" ng-app="startApp">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="shortcut icon" href="./logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>文档 ｜ jsdoor 🔨 JS快速使用库，包括开发服务器和一系列实用工具</title>
-  <script type="module" crossorigin src="./index.4f47d358.js"></script>
-  <link rel="stylesheet" href="./index.a66fe737.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <title>官网 ｜ jsdoor</title>
+
+    <!-- 兼容样式 -->
+    <link rel="stylesheet" href="./styles/normalize.css">
+
+    <!-- jquery -->
+    <script src="./libs/min/jquery.js"></script>
+
+    <!-- angular.js -->
+    <script src="./libs/min/angular.js"></script>
+
+    <!-- 路由 -->
+    <script src="./libs/min/ui-router.js"></script>
+
+    <!-- 编辑器 -->
+    <script src="./libs/min/open-web-editor.js"></script>
+
 </head>
 
-<body>
-  <div id="app"></div>
-  
+<body ui-style="./styles/common.scss" ng-controller="IndexController">
+
+    <span class="fixed stone"></span>
+    <ul class="quick-link left">
+        <li class="item main" ng-click="goto('main.guide')">
+            <span ui-active="stateValues[0]=='main'?'yes':'no'">主界面</span>
+        </li>
+        <li class="item examples" ng-click="goto('examples')">
+            <span ui-active="stateValues[0]=='examples'?'yes':'no'">演示用例</span>
+        </li>
+    </ul>
+
+    <div class="quick-link left bottom">
+        <a class="item code-source" href="https://github.com/zxl20070701/jsdoor" target="_blank">
+            代码仓库
+        </a>
+        <a class="item contact-us" href="https://github.com/zxl20070701/jsdoor/issues" target="_blank">
+            联系我们
+        </a>
+    </div>
+    <span class="fixed edit" ng-click="openEditPage()" title="发现错误？想参与编辑？ 在 GitHub 上编辑此页！"></span>
+
+    <span class="fixed angry"></span>
+    <div class="quick-link right">
+        <a class="item notebook" href="https://zxl20070701.github.io/notebook/" target="_blank">
+            笔记
+        </a>
+        <a class="item toolbox" href="https://zxl20070701.github.io/toolbox/" target="_blank">
+            工具
+        </a>
+    </div>
+    <a class="fixed laboratory" href="https://github.com/zxl20070701/laboratory" target="_blank"></a>
+
+    <!--路由跳转视图-->
+    <div ui-view></div>
+
+    <!-- 项目配置文件 -->
+    <script src="./libs/config.js"></script>
+    <script>
+
+        console.log(
+            '\u001B[92m👉   Thank you for using (\u001B[94m https://github.com/zxl20070701/jsdoor \u001B[92m) as the JavaScript Library! 💯\u001B[0m\n'
+        );
+
+        ctrlapp.controller('IndexController', ['$scope', '$rootScope', '$urlFormat', '$openEditPage', function ($scope, $rootScope, $urlFormat, $openEditPage) {
+
+            // 打开编辑界面
+            $scope.openEditPage = function () {
+                $openEditPage();
+            };
+
+        }]);
+    </script>
+
+    <!-- 指令 -->
+    <script src="./libs/modules/directives/ui-style.js"></script>
+    <script src="./libs/modules/directives/ui-active.js"></script>
+    <script src="./libs/modules/directives/ui-code.js"></script>
+
+    <!-- 服务 -->
+    <script src="./libs/modules/services/$compileStyle.js"></script>
+    <script src="./libs/modules/services/$urlFormat.js"></script>
+    <script src="./libs/modules/services/$openEditPage.js"></script>
+    <script src="./libs/modules/services/$updateQuickMenu.js"></script>
+    <script src="./libs/modules/services/$animation.js"></script>
+
 </body>
 
 </html>
