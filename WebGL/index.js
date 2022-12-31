@@ -1,8 +1,8 @@
-import { useShader } from './shader';
-import { newBuffer, writeBuffer, useBuffer } from './buffer';
-import { initTexture, linkImage, linkCube } from './texture';
-import value from './value';
-import painter from './painter';
+import { useShader } from './shader.js';
+import { newBuffer, writeBuffer, useBuffer } from './buffer.js';
+import { initTexture, linkImage, linkCube } from './texture.js';
+import value from './value.js';
+import painter from './painter.js';
 
 // 获取webgl上下文
 var getCanvasWebgl = function (node, opts) {

@@ -53,27 +53,27 @@ body {
             }
 
             &.notebook {
-                background-image: url('./images/notebook.png');
+                background-image: url('./docs/images/notebook.png');
             }
 
             &.toolbox {
-                background-image: url('./images/toolbox.png');
+                background-image: url('./docs/images/toolbox.png');
             }
 
             &.main {
-                background-image: url('./images/logo.png');
+                background-image: url('./docs/images/logo.png');
             }
 
             &.examples {
-                background-image: url('./images/idea.png');
+                background-image: url('./docs/images/idea.png');
             }
 
             &.code-source {
-                background-image: url('./images/code-source.jpg');
+                background-image: url('./docs/images/code-source.jpg');
             }
 
             &.contact-us {
-                background-image: url('./images/contact-us.jpg');
+                background-image: url('./docs/images/contact-us.jpg');
             }
         }
     }
@@ -88,20 +88,20 @@ body {
         z-index: 1;
 
         &.stone {
-            background-image: url("./images/stone.png");
+            background-image: url("./docs/images/stone.png");
             top: 60px;
             left: -2px;
         }
 
         &.angry {
-            background-image: url("./images/angry.png");
+            background-image: url("./docs/images/angry.png");
             top: 64px;
             right: 0;
             z-index: 2;
         }
 
         &.laboratory {
-            background-image: url('./images/laboratory.png');
+            background-image: url('./docs/images/laboratory.png');
             right: 5px;
             top: 400px;
             width: 100px;
@@ -110,7 +110,7 @@ body {
         }
 
         &.edit {
-            background-image: url('./images/edit.png');
+            background-image: url('./docs/images/edit.png');
             left: 0;
             top: 500px;
             width: 50px;

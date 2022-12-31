@@ -61,9 +61,9 @@ startapp.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', 
     //  主界面
     .state("main", {
       url: "/main",
-      templateUrl: addToken("htmls/Main/mod.html"),
+      templateUrl: addToken("./docs/htmls/Main/mod.html"),
       resolve: {
-        delay: startapp.asyncjs('htmls/Main/mod.js')
+        delay: startapp.asyncjs('./docs/htmls/Main/mod.js')
       },
       controller: "MainController"
     })
@@ -71,9 +71,9 @@ startapp.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', 
     // 首页
     .state("main.guide", {
       url: "/guide",
-      templateUrl: addToken("htmls/Guide/mod.html"),
+      templateUrl: addToken("./docs/htmls/Guide/mod.html"),
       resolve: {
-        delay: startapp.asyncjs('htmls/Guide/mod.js')
+        delay: startapp.asyncjs('./docs/htmls/Guide/mod.js')
       },
       controller: "GuideController"
     })
@@ -81,9 +81,9 @@ startapp.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', 
     // 文档
     .state("main.docs", {
       url: "/docs",
-      templateUrl: addToken("htmls/Docs/mod.html"),
+      templateUrl: addToken("./docs/htmls/Docs/mod.html"),
       resolve: {
-        delay: startapp.asyncjs('htmls/Docs/mod.js')
+        delay: startapp.asyncjs('./docs/htmls/Docs/mod.js')
       },
       controller: "DocsController"
     })
@@ -91,69 +91,69 @@ startapp.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', 
     // 文档 / 如何使用？
     .state("main.docs.guide", {
       url: "/guide",
-      templateUrl: addToken("htmls/Docs/pages/guide.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/guide.html")
     })
 
     // 文档 / 树布局算法
     .state("main.docs.treeLayout", {
       url: "/treeLayout",
-      templateUrl: addToken("htmls/Docs/pages/treeLayout.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/treeLayout.html")
     })
 
     // 文档 / 监听节点大小改变
     .state("main.docs.resizeElement", {
       url: "/resizeElement",
-      templateUrl: addToken("htmls/Docs/pages/resizeElement.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/resizeElement.html")
     })
 
     // 文档 / 列主序存储的4x4坐标变换矩阵
     .state("main.docs.Matrix4", {
       url: "/Matrix4",
-      templateUrl: addToken("htmls/Docs/pages/Matrix4.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/Matrix4.html")
     })
 
     // 文档 / 字符串表达式解析
     .state("main.docs.value", {
       url: "/value",
-      templateUrl: addToken("htmls/Docs/pages/value.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/value.html")
     })
 
     // 文档 / 刻度尺刻度求解
     .state("main.docs.ruler", {
       url: "/ruler",
-      templateUrl: addToken("htmls/Docs/pages/ruler.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/ruler.html")
     })
 
     // 文档 / 插值函数
     .state("main.docs.interpolation", {
       url: "/interpolation",
-      templateUrl: addToken("htmls/Docs/pages/interpolation.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/interpolation.html")
     })
 
     // 文档 / 动画执行函数
     .state("main.docs.Animation", {
       url: "/Animation",
-      templateUrl: addToken("htmls/Docs/pages/Animation.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/Animation.html")
     })
 
     // 文档 / 三维画笔 WebGL
     .state("main.docs.WebGL", {
       url: "/WebGL",
-      templateUrl: addToken("htmls/Docs/pages/WebGL.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/WebGL.html")
     })
 
     // 文档 / 开发服务器
     .state("main.docs.server", {
       url: "/server",
-      templateUrl: addToken("htmls/Docs/pages/server.html")
+      templateUrl: addToken("./docs/htmls/Docs/pages/server.html")
     })
 
     // 演示用例
     .state("examples", {
       url: "/examples",
-      templateUrl: addToken("htmls/Examples/mod.html"),
+      templateUrl: addToken("./docs/htmls/Examples/mod.html"),
       resolve: {
-        delay: startapp.asyncjs('htmls/Examples/mod.js')
+        delay: startapp.asyncjs('./docs/htmls/Examples/mod.js')
       },
       controller: "ExamplesController"
     });

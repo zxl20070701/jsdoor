@@ -5,3 +5,4 @@ node_modules
 docs
 *.test.html
 package-lock.json
+index.html

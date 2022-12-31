@@ -1,5 +1,31 @@
-<div ng-init='initMethod()' ui-style="./htmls/Examples/mod.scss" class="examples-view">
-
-    设计开发中，敬请期待~
-  
+<div ng-init='initMethod()' ui-style="./docs/htmls/Examples/mod.scss" class="examples-view">
+    <div class="menu">
+        <div>
+            <h1>演示用例</h1>
+            <h3 ui-active="pagename=='y_x2_z2'?'yes':'no'" ng-click="loadExample('y_x2_z2')">
+                函数y=x<sup>2</sup>+z<sup>2</sup>三维几何
+            </h3>
+        </div>
+    </div>
+    <div class="view">
+        <div>
+            <div>
+                <div class="title">
+                    源代码
+                    <button title='点击运行代码' ng-click='doRun()'>
+                        运行
+                    </button>
+                </div>
+                <div class="content" id='editor-view'></div>
+            </div>
+            <div>
+                <div class="title">
+                    运行结果
+                </div>
+                <div class="content">
+                    <iframe id='run-view'></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

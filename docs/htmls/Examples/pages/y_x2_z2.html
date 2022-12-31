@@ -1,0 +1,94 @@
+<!-- 顶点着色器 -->
+<script type='x-shader/x-vertex' id='vs'>
+    attribute vec4 a_position;
+    uniform mat4 u_matrix;
+    attribute vec4 a_color;
+    varying vec4 v_color;
+    void main(){
+        gl_Position=u_matrix * a_position;
+        v_color=a_color;
+    }
+</script>
+
+<!-- 片段着色器 -->
+<script type='x-shader/x-fragment' id='fs'>
+    precision mediump float;
+    varying vec4 v_color;
+    void main(){
+        gl_FragColor=v_color;
+    }
+</script>
+
+<canvas width='400' height='400'>非常抱歉，您的浏览器不支持canvas!</canvas>
+
+<script type="module">
+
+    import webglRender from 'jsdoor/WebGL/index.js';
+    import Matrix4 from 'jsdoor/Matrix4/index.js';
+
+    var webgl = webglRender(document.getElementsByTagName('canvas')[0]);
+
+    webgl.shader(
+        document.getElementById("vs").innerText,
+        document.getElementById("fs").innerText
+    );
+
+    /**
+     * 许多的点，三个点拼接成一个三角形，
+     * 每个点由6个数据组成，前3个表示点的位置，后3个表示点的颜色
+     * 而一个个三角形拼接成最终的图形
+    */
+    var points = [];
+
+    // 一个根据值来确定颜色的方法
+    var valToColor = function (val) {
+        return [val * 0.5, 0.5, 1 - val * 0.5];
+    }
+
+    var dist = 0.02;
+    var color, val;
+    // y=x2+z2;
+    for (var x = -1; x < 1; x += dist) {
+        for (var z = -1; z <= 1; z += dist) {
+
+            // 左上三角形
+
+            val = x * x + z * z;
+            color = valToColor(val);
+            points.push(x, val, z, color[0], color[1], color[2]);
+
+            val = (x + dist) * (x + dist) + z * z;
+            points.push(x + dist, val, z, color[0], color[1], color[2]);
+
+            val = x * x + (z + dist) * (z + dist);
+            points.push(x, val, z + dist, color[0], color[1], color[2]);
+
+            // 右下三角形
+
+            val = (x + dist) * (x + dist) + z * z;
+            color = valToColor(val);
+            points.push(x + dist, val, z, color[0], color[1], color[2]);
+
+            val = x * x + (z + dist) * (z + dist);
+            points.push(x, val, z + dist, color[0], color[1], color[2]);
+
+            val = (x + dist) * (x + dist) + (z + dist) * (z + dist);
+            points.push(x + dist, val, z + dist, color[0], color[1], color[2]);
+
+        }
+    }
+
+    webgl.buffer().write(new Float32Array(points)).use('a_position', 3, 6, 0).use('a_color', 3, 6, 3); // 点的坐标
+
+    //  创建相机对象
+    var camera = Matrix4([
+        0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1
+    ]).rotate(0.9, 0, 1, 0).rotate(0.3, 1, 0, 0, 0, 0, 1).move(0.5, 0, -1, 0);
+
+    setInterval(function () {
+        camera.rotate(0.05, 0, 1, 0);
+        webgl.setUniformMatrix4fv("u_matrix", camera.value());  // 传递照相机
+        webgl.painter().triangles(0, points.length / 6);  // 绘制
+    }, 30);
+
+</script>

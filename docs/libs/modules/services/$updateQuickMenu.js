@@ -11,7 +11,7 @@
             var els = docEl.children;
 
             fixedMenuEl.innerHTML = "";
-            for (let index = 0; index < els.length; index++) {
+            for (var index = 0; index < els.length; index++) {
                 (function (index) {
 
                     if (["H2", "H3", "H4"].indexOf(els[index].nodeName) > -1) {
